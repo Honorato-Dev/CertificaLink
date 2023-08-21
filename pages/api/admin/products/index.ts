@@ -1,5 +1,5 @@
 import { getSession } from "next-auth/react";
-import Product from "@/models/Product";
+import Certifical from "@/models/Certifical";
 import db from "@/utils/db";
 
 const handler = async (req:any, res:any) => {
@@ -20,24 +20,24 @@ const handler = async (req:any, res:any) => {
 };
 const postHandler = async (req:any, res:any) => {
     await db.connect();
-    const newProduct = new Product({
-        name:'Insira o o nome do produto',
+    const newCertifical = new Certifical({
+        name:'Insira o o nome da Certificação',
         slug: 'insira-slug-sem-espaço-minusculas-sem-acentos' + Math.random(),
         category: 'insira a categoria com letras minusculas e sem espaços',
         image: '',
-        price: 'insira o preço do produto',
-        description: 'Insira a descrição do produto',
+        
+        description: 'Insira a descrição da certificação',
         contact:'Insira o contato do vendedor'
     });
-    const product = await newProduct.save();
+    const certifical = await newCertifical.save();
     await db.disconnect()
-    res.send({message: 'Product created successfully', product})
+    res.send({message: 'Product created successfully', certifical})
 }
 const getHandler = async (req:any, res:any) => {
     await db.connect();
-    const products = await Product.find({});
+    const certifical = await Certifical.find({});
     await db.disconnect();
-    res.send(products);
+    res.send(certifical);
 }
 
 export default handler;

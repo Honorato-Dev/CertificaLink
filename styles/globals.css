@@ -2,26 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    padding:0;
+    margin:0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.card {
+    @apply flex bg-white bg-opacity-80 hover:bg-opacity-60  flex-col justify-between mb-5 block rounded-lg border border-gray shadow-md hover:shadow-xl 
+}
+.heroButton {
+    @apply mt-2 px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-white transition-all hover:border-orange500 hover:text-black hover:bg-gray
+  }
+
+.primary-button {
+    @apply rounded text-white font-semibold bg-indigo400 py-2 px-4 shadow outline-none hover:bg-indigo600 active:bg-indigo800
+  }
+  .default-button{
+    @apply rounded bg-gray py-2 px-4 text-black shadow outline-none hover:bg-graym active:bg-grayh
+ }
+  .login-button {
+    @apply rounded text-white font-semibold bg-green500 py-2 px-4 shadow outline-none hover:bg-green700 active:bg-green900
+  }
+  .delete-button {
+    @apply rounded  bg-reds py-2 px-4 shadow outline-none hover:bg-red active:bg-red;
+  }
+  .edit-button {
+    @apply rounded  bg-green300 py-2 px-4 shadow outline-none hover:bg-green500 active:bg-green700;
+  }
+  .dropdown-link {
+    @apply flex p-2 bg-green300 hover:bg-green500 bg-opacity-80 hover:bg-opacity-80 ;
+}
+.nav-bar {
+  @apply flex p-2 text-white text-lg hover:text-green500
+ }
+.alert-error {
+  @apply  my-3 rounded-lg bg-reds p-3 text-red;
+}
+
+.alert-success {
+  @apply my-3 rounded-lg bg-green700 p-3 text-green300;
+}
+
+  input,
+select,
+textarea {
+    @apply rounded border p-2 outline-none ring-green300 focus:ring;
 }

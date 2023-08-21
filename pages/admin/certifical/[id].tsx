@@ -38,7 +38,7 @@ function reducer(state:any, action:any){
     }
 }
 
-const AdminProductEditScreen = () => {
+const AdminCertificalEditScreen = () => {
     const router = useRouter()
     const {query} = useRouter();
     const productId:any = query.id;
@@ -258,5 +258,5 @@ const AdminProductEditScreen = () => {
         </Layout>
     )
 }
-AdminProductEditScreen.auth = {adminOnly: true};
-export default AdminProductEditScreen
+AdminCertificalEditScreen.auth = {adminOnly: true};
+export default AdminCertificalEditScreen

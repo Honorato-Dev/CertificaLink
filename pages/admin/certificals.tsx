@@ -12,7 +12,7 @@ function reducer(state:any, action:any){
          case 'FETCH_REQUEST':
             return {...state, loading: true, error: ''};
          case 'FETCH_SUCCESS':
-            return {...state, loading: false, products: action.payload, error: ''};
+            return {...state, loading: false, certificals: action.payload, error: ''};
          case 'FETCH_FAIL':
             return {...state, loading: false, error: action.payload};
           case 'CREATE_REQUEST':
@@ -34,12 +34,12 @@ function reducer(state:any, action:any){
     }
 }
 
-const AdminProductsScreen = () => {
+const AdmincertificalsScreen = () => {
 
     const router = useRouter()
-    const[{ loading, error, products, loadingCreate, successDelete, loadingDelete }, dispatch] = useReducer(reducer,{
+    const[{ loading, error, certificals, loadingCreate, successDelete, loadingDelete }, dispatch] = useReducer(reducer,{
         loading:true,
-        products:[],
+        certificals:[],
         error: '',
     });
 
@@ -49,10 +49,10 @@ const AdminProductsScreen = () => {
         }
         try{
             dispatch({type:'CREATE_REQUEST'});
-            const { data } = await axios.post(`/api/admin/products`);
+            const { data } = await axios.post(`/api/admin/certificals`);
             dispatch({type: 'CREATE_SUCCESS'});
-            toast.success('Produto criado com sucesso!')
-            router.push(`/admin/product/${data.product._id}`);
+            toast.success('Certificado adicionado com sucesso!')
+            router.push(`/admin/certifical/${data.certifical._id}`);
         }catch(err){
             dispatch({type: 'CREATE_FAIL'});
             toast.error(getError(err))
@@ -62,7 +62,7 @@ const AdminProductsScreen = () => {
         const fetchData = async () => {
             try{
                 dispatch({type: 'FETCH_REQUEST'});
-                const { data } = await axios.get(`/api/admin/products`);
+                const { data } = await axios.get(`/api/admin/certificals`);
                 dispatch({type:'FETCH_SUCCESS', payload:data});
                 
             }catch (err) {
@@ -78,13 +78,13 @@ const AdminProductsScreen = () => {
         
     },[successDelete])
 
-    const deleteHandler = async (productId:any) => {
+    const deleteHandler = async (certificalId:any) => {
              if(!window.confirm('Are you sure?')){
                 return;
              } 
              try{
                 dispatch({type: 'DELETE_REQUEST'});
-                await axios.delete(`/api/admin/products/${productId}`)
+                await axios.delete(`/api/admin/certificals/${certificalId}`)
                 dispatch({type: 'DELETE_SUCCESS'});
                 toast.success('Deleted successfully')
 
@@ -94,7 +94,7 @@ const AdminProductsScreen = () => {
              }  
     }
   return (
-    <Layout title='Produtos Admin'>
+    <Layout title='Certificals Admin'>
      <div className='grid md:grid-cols-4 md:gap-5'>
             <div className='text-indigo600'>
                 <ul>
@@ -113,7 +113,7 @@ const AdminProductsScreen = () => {
                         <Link className='text-indigo' href='/admin/vacancies'>Vagas</Link>
                     </li> */}
                     <li>
-                        <Link className='text-indigo' href='/admin/products'>
+                        <Link className='text-indigo' href='/admin/certificals'>
                         <span className='font-bold text-xl bg-white bg-opacity-80 p-1 rounded-md'>Vendas</span></Link>
                     </li>
                     <li>
@@ -124,7 +124,7 @@ const AdminProductsScreen = () => {
             </div>
             <div className='overflow-x-auto md:col-span-3'>
                 <div className='flex justify-between'>
-                   <h1 className='mb-4 text-3xl font-semibold'>Produtos</h1>
+                   <h1 className='mb-4 text-3xl font-semibold'>Certificals</h1>
                    {loadingDelete && <div>Deleting item...</div>}
                    <button 
                         disabled={loadingCreate} 
@@ -145,26 +145,26 @@ const AdminProductsScreen = () => {
                        <tr>
                                 <th className='px-5 text-left'>ID</th>
                                 <th className='p-5 text-left'>NOME</th>
-                                <th className='p-5 text-left'>PREÇO</th>
+                                
                                 <th className='p-5 text-left'>CATEGORIA</th>
                                 <th className='p-5 text-left'>CONTATO</th>
                                 <th className='p-5 text-left'>AÇÕES</th>
                             </tr>
                        </thead> 
                        <tbody>
-                         {products.map((product:any)=> (
-                            <tr key={product._id} className='border-b'>
-                                <td className='p-5'>{product._id}</td>
-                                <td className='p-5'>{product.name}</td>
-                                <td className='p-5'>R$ {product.price}</td>
-                                <td className='p-5'>{product.category}</td>
-                                <td className='p-5'>{product.contact}</td>
+                         {certificals.map((certifical:any)=> (
+                            <tr key={certifical._id} className='border-b'>
+                                <td className='p-5'>{certifical._id}</td>
+                                <td className='p-5'>{certifical.name}</td>
+                                
+                                <td className='p-5'>{certifical.category}</td>
+                                <td className='p-5'>{certifical.contact}</td>
                                 <td className='p-5 flex '>
                                     <div>
-                                    <Link className='edit-button' href={`/admin/product/${product._id}`} passHref >Editar</Link> &nbsp; 
+                                    <Link className='edit-button' href={`/admin/certifical/${certifical._id}`} passHref >Editar</Link> &nbsp; 
                                     </div>
                                     <div>
-                                    <button onClick={()=> deleteHandler(product._id)} className='delete-button'>
+                                    <button onClick={()=> deleteHandler(certifical._id)} className='delete-button'>
                                         Delete
                                     </button>
                                     </div>
@@ -182,5 +182,5 @@ const AdminProductsScreen = () => {
   )
 }
 
-AdminProductsScreen.auth = {adminOnly: true};
-export default AdminProductsScreen
+AdmincertificalsScreen.auth = {adminOnly: true};
+export default AdmincertificalsScreen

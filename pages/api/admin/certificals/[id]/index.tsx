@@ -1,5 +1,5 @@
 import { getSession } from "next-auth/react"
-import Product from "@/models/Product";
+import Certifical from "@/models/Certifical";
 import db from "@/utils/db";
 
 
@@ -24,41 +24,41 @@ const handler = async (req:any, res:any) => {
 };
 const getHandler= async (req:any, res:any) =>{
   await db.connect();
-  const product:any = await Product.findById(req.query.id);
+  const certifical:any = await Certifical.findById(req.query.id);
   await db.disconnect();
-  res.send(product);
+  res.send(certifical);
 };
 
 const putHandler= async (req:any,res:any) => {
     await db.connect();
-    const product = await Product.findById(req.query.id);
-    if (product){
-        product.name = req.body.name || product.name;
-        product.slug = req.body.slug || product.slug;
-        product.category = req.body.category || product.category;
-        product.image = req.body.image || product.image;
-        product.price = req.body.price || product.price;
-        product.description = req.body.description || product.description;
-        product.contact = req.body.contact || product.contact;
-        await product.save(); 
+    const certifical = await Certifical.findById(req.query.id);
+    if (certifical){
+        certifical.name = req.body.name || certifical.name;
+        certifical.slug = req.body.slug || certifical.slug;
+        certifical.category = req.body.category || certifical.category;
+        certifical.image = req.body.image || certifical.image;
+        certifical.price = req.body.price || certifical.price;
+        certifical.description = req.body.description || certifical.description;
+        certifical.contact = req.body.contact || certifical.contact;
+        await certifical.save(); 
         await db.disconnect();
-        res.send({message: 'Product updated successfully'})
+        res.send({message: 'certifical updated successfully'})
     }else{
         await db.disconnect();
-        res.status(404).send({message:'Product not found'})
+        res.status(404).send({message:'certifical not found'})
     }
    
 };
 const deleteHandler = async (req:any, res:any) => {
     await db.connect();
-    const product = await Product.findById(req.query.id);
-    if (product) {
-        await product.deleteOne();
+    const certifical = await Certifical.findById(req.query.id);
+    if (certifical) {
+        await certifical.deleteOne();
         await db.disconnect();
-        res.send({message: 'Product deleted successfully'})
+        res.send({message: 'certifical deleted successfully'})
     }else{
         await db.disconnect();
-        res.status(404).send({ message: 'Product not found'})
+        res.status(404).send({ message: 'certifical not found'})
     }
 }
 export default handler

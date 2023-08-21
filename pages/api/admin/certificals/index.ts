@@ -31,7 +31,7 @@ const postHandler = async (req:any, res:any) => {
     });
     const certifical = await newCertifical.save();
     await db.disconnect()
-    res.send({message: 'Product created successfully', certifical})
+    res.send({message: 'Certifical created successfully', certifical})
 }
 const getHandler = async (req:any, res:any) => {
     await db.connect();

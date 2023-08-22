@@ -39,7 +39,7 @@ const Layout = ({children, title}:any) => {
             <div  className='text-3xl py-3 flex items-center '>
              <Link href='/'>
               <div className=' lg:hidden absolute'>
-              <Image className='bg-white rounded-full' src='/images/pdalogo2.png' alt='logo' width={100} height={100}/>
+              <Image className='bg-white rounded-full' src='/images/logo1.png' alt='logo' width={100} height={100}/>
                 {/* <p className={bebas.className}>Parque das Árvores</p> */}
                 </div>
              </Link>
@@ -97,7 +97,7 @@ const Layout = ({children, title}:any) => {
               <li><Link className="nav-bar " href="/login?redirect=/services">Serviços</Link></li>
               <div  className='text-3xl py-3 flex items-center'>
              <Link href='/'>
-              <Image className='bg-white rounded-full' src='/images/pdalogo2.png' alt='logo' width={150} height={150}/>
+              <Image className='bg-white rounded-full' src='/images/logo1.png' alt='logo' width={150} height={150}/>
                 {/* <p className={bebas.className}>Parque das Árvores</p> */}
              </Link>
             </div>
@@ -123,14 +123,14 @@ const Layout = ({children, title}:any) => {
                           </DropdownLink>
                         </Menu.Item>
                         <Menu.Item>
-                          <DropdownLink className='dropdown-link' href='/login?redirect=/news'>
+                          <DropdownLink className='dropdown-link' href='/login?redirect=/certificals'>
                           Mural
                           </DropdownLink>
                         </Menu.Item>
                        
                         <Menu.Item>
                                     
-                                    <Link className='dropdown-link' href='/login?redirect=/services' >
+                                    <Link className='dropdown-link' href='/login?redirect=/certificals' >
                                         Serviços
                                     </Link>
                                     
@@ -146,7 +146,7 @@ const Layout = ({children, title}:any) => {
                             </Menu.Item> */}
                              <Menu.Item>
                                     
-                                    <Link className='dropdown-link' href='/login?redirect=/products' >
+                                    <Link className='dropdown-link' href='/login?redirect=/certificals' >
                                         Vendas
                                     </Link>
                                     
@@ -172,7 +172,7 @@ const Layout = ({children, title}:any) => {
         <footer className='flex h-20 justify-between items-center shadow-inner bg-greenzap'>
           
               <div className='px-4'>
-                <p className="font-semibold">Condomínio Parque das Árvores </p>
+                <p className="font-semibold">CertificaLink</p>
               </div>
               <div>
                 <p>  <span>Copyright</span> &copy; 2023  </p>
@@ -182,7 +182,7 @@ const Layout = ({children, title}:any) => {
             <Link className='flex pl-3 pr-2' href='https://api.whatsapp.com/send?phone=5571999426443&text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es'><BsWhatsapp className='w-5 h-5'/></Link>
             
             <Link className='flex pl-1 pr-2'  href='/contact'><FiMail className='w-5 h-5'/></Link>
-            <Link className='flex pl-1 pr-3'  href='https://api.whatsapp.com/send?phone=5571999426443&text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es'><BiSupport className='w-5 h-5'/></Link>
+            <Link className='flex pl-1 pr-3'  href='https://api.whatsapp.com/send?phone=5571987840407&text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es'><BiSupport className='w-5 h-5'/></Link>
               </div>
           
         

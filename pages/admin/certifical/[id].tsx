@@ -14,7 +14,7 @@ type FormValues = {
     slug:string;
     category:string; 
     image:File; 
-    price:string; 
+    
     description: string;
     contact:string;
    };
@@ -41,7 +41,7 @@ function reducer(state:any, action:any){
 const AdminCertificalEditScreen = () => {
     const router = useRouter()
     const {query} = useRouter();
-    const productId:any = query.id;
+    const certificalId:any = query.id;
     const [{loading, error, loadingUpdate, loadingUpload}, dispatch] = useReducer(reducer, {
         loading:true,
         error:''
@@ -53,13 +53,13 @@ const AdminCertificalEditScreen = () => {
         const fetchData = async () => {
             try {
                 dispatch({type:'FETCH_RESQUEST'})
-                const {data} = await axios.get(`/api/admin/products/${productId}`);
+                const {data} = await axios.get(`/api/admin/certificals/${certificalId}`);
                 dispatch({type:'FETCH_SUCCESS'})
                 setValue('name', data.name);
                 setValue('slug', data.slug);
                 setValue('category', data.category);
                 setValue('image', data.image);
-                setValue('price', data.price);
+                
                 setValue('description', data.description);
                 setValue('contact', data.contact);
                 
@@ -70,7 +70,7 @@ const AdminCertificalEditScreen = () => {
             }
         }
         fetchData();
-    },[productId, setValue])
+    },[certificalId, setValue])
 
 
      const uploadHandler = async (e:any, imageField:any = 'image') => {
@@ -97,22 +97,22 @@ const AdminCertificalEditScreen = () => {
         }
      }
 
-    const submitHandler = async ({name, category, slug, image, price, description,  contact }:any) => {
+    const submitHandler = async ({name, category, slug, image,  description,  contact }:any) => {
        try{
         dispatch({type:'UPDATE_REQUEST'});
-        await axios.put(`/api/admin/products/${productId}`, {
-            name, slug, price, category, image, description, contact   
+        await axios.put(`/api/admin/certificals/${certificalId}`, {
+            name, slug,  category, image, description, contact   
         });
         dispatch({type:'UPDATE_SUCCESS'});
         toast.success('Produto atualizado com sucesso!')
-        router.push('/admin/products');
+        router.push('/admin/certificals');
        }catch(err){
         dispatch({type:'UPDATE_FAIL', payload: getError(err)});
        }
     };
     
     return (
-        <Layout title={`Produto: ${productId}`}>
+        <Layout title={`Certifical: ${certificalId}`}>
             
             <div className='grid md:grid-cols-4 md:gap-5'>
             <div className='text-indigo600'>
@@ -148,7 +148,7 @@ const AdminCertificalEditScreen = () => {
                  <div className='alert-error'>{error}</div>
                  ):(
                     <form className='mx-auto max-screen-md' onSubmit={handleSubmit(submitHandler)}>
-                            <h1 className='mb-4 text-3xl font-semibold pt-8'>{` Produto ${productId}`}</h1>
+                            <h1 className='mb-4 text-3xl font-semibold pt-8'>{` Certifical ${certificalId}`}</h1>
                             <div className='bg-white rounded-md bg-opacity-80 m-2 p-2'>
                             <div className='mb-4'>
                                 <label className='font-semibold' htmlFor='name' >Nome <span className='text-graym '>(Insira o nome do produto)</span></label>
@@ -202,18 +202,7 @@ const AdminCertificalEditScreen = () => {
                                 {loadingUpload && <div></div>}
                             </div>
 
-                            <div className='mb-4'>
-                                <label className='font-semibold' htmlFor='price' >Preço <span className='text-graym '>(Insira o preço do produto)</span></label>
-                                <input 
-                                type='text' 
-                                className='w-full' 
-                                id='price' 
-                                
-                                {...register('price',{required: 'Insira o preço do produto'})}
-                                />
-                               {errors.price && (<div className='text-red'>{errors.price.message}</div>)}
-                            </div>
-                           
+                         
                             
                           
                         

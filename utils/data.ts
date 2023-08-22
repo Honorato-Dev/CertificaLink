@@ -83,51 +83,7 @@ const data:Data = {
             
             contact:'7198765-1233'
         },
-        {
-            name:'cg 125',
-            slug:'cg-125',
-            category:'auto',
-            image:'/images/cg125.jpg',
-            description:'honda cg 125 2006',
-            
-            contact:'7198765-1233'
-        },
-        {
-            name:'Jogo de panelas',
-            slug:'jogo-de-panelas',
-            category:'utensilios',
-            image:'/images/jogodepanelas.jpeg',
-            description:'jogo de panla semi novo',
-            
-            contact:'7198765-1233'
-        },
-        {
-            name:'pia',
-            slug:'pia',
-            category:'material de construção',
-            image:'/images/pia.jpg',
-            description:'Pia de ceramica',
-            
-            contact:'7198765-1233'
-        },
-        {
-            name:'sofa',
-            slug:'sofa',
-            category:'moveis',
-            image:'/images/sofa.jpeg',
-            description:'sofa semi novo',
-            
-            contact:'7198765-1233'
-        },
-        {
-            name:'celular a20',
-            slug:'celular-a20',
-            category:'eletronico',
-            image:'/images/a20.jpeg',
-            description:'celuar A20 com um ano de uso',
-            
-            contact:'7198765-1233'
-        },
+       
 
     ]
 }

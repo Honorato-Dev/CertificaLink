@@ -13,9 +13,9 @@ interface Data {
 const data:Data = {
     users: [
         {
-            name:'Debora',
-            email:'debora@parquedasarvores.com',
-            password:bcrypt.hashSync('cpdaythe'),
+            name:'admin',
+            email:'admin@certificalink.com',
+            password:bcrypt.hashSync('thmpv77d6f'),
             isAdmin: true, 
          },
 

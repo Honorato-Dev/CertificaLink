@@ -8,15 +8,15 @@ import CertificalItem from '@/components/CertificalItem';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-const CertificalScreen = ({ products }: any) => {
-  const lastElement = [products[products.length - 1]];
-  const penultimateElement = [products[products.length - 2]];
+const CertificalScreen = ({ certificals }: any) => {
+  const lastElement = [certificals[certificals.length - 1]];
+  const penultimateElement = [certificals[certificals.length - 2]];
   function returnListWithoutTheLastTwo(array: any) {
     return array.slice(0, -2);
   }
-  const originalArray = products;
-  const listWithoutTheLastTwo = returnListWithoutTheLastTwo(originalArray);
-  const reverseArr = listWithoutTheLastTwo.slice().reverse();
+  const originalArray = certificals;
+  // const listWithoutTheLastTwo = returnListWithoutTheLastTwo(originalArray);
+  // const reverseArr = listWithoutTheLastTwo.slice().reverse();
 
   const [query, setQuery] = useState('');
   const router = useRouter();
@@ -58,26 +58,18 @@ const CertificalScreen = ({ products }: any) => {
       </div>
 
       <h1 className="flex justify-center text-sm font-semibold py-12 md:text-2xl lg:text:2xl">
-        <span className="  rounded-full uppercase tracking-[20px]">Vendas</span>
+        <span className="  rounded-full uppercase tracking-[20px]">Certificados</span>
       </h1>
       <div className="grid grid-cols-1 gap-2 pt-8 md:grid-cols-3 lg:grid-cols-2">
         {/* LastElement */}
-        {lastElement.map((certifical: any) => (
+        {originalArray.map((certifical: any) => (
           <CertificalItem certifical={certifical} key={certifical.slug}></CertificalItem>
         ))}
 
-        {/* penultimateElemnt */}
-        {penultimateElement.map((certifical: any) => (
-          <CertificalItem certifical={certifical} key={certifical.slug}></CertificalItem>
-        ))}
+       
       </div>
 
-      {/*ALL Elements*/}
-      <div className="grid grid-cols-1 gap-2 md:grid-cols-3 lg:grid-cols-4">
-        {reverseArr.map((certifical: any) => (
-          <CertificalItem certifical={certifical} key={certifical.slug}></CertificalItem>
-        ))}
-      </div>
+   
       </div>
       
     </Layout>
@@ -89,7 +81,7 @@ export async function getServerSideProps() {
   const certificals: any = await Certifical.find().lean();
   return {
     props: {
-      certifical: certificals.map(db.convertDocToObj),
+      certificals: certificals.map(db.convertDocToObj),
     },
   };
 }

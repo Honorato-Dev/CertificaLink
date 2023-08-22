@@ -130,7 +130,7 @@ const AdmincertificalsScreen = () => {
                         disabled={loadingCreate} 
                         onClick={createHandler} 
                         className='primary-button'
-                        >{loadingCreate ? 'Loading': 'Criar Produto'}
+                        >{loadingCreate ? 'Loading': 'Criar Certificado'}
                      </button>
                 </div>
                 

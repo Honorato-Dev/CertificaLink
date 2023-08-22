@@ -33,7 +33,7 @@ interface Certificals {
     category:string;
     image:string;
     description:string;
-    
+    date:string;
     contact:string;
 
 }
@@ -71,7 +71,7 @@ const data:Data = {
             category:'moveis',
             image:'/images/cadeiradeplastico.jpeg',
             description:'cadei ra de plastico nova',
-            
+            date:'',
             contact:'7198765-1233'
         },
         {
@@ -80,7 +80,7 @@ const data:Data = {
             category:'eletrodomestico',
             image:'/images/maquinadelavar.jpeg',
             description:'Maquina de lavar em excelente estado',
-            
+            date:'',
             contact:'7198765-1233'
         },
        

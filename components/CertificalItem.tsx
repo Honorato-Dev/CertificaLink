@@ -30,6 +30,7 @@ const CertificalItem = ({certifical}:any) => {
     <p className='text-indigo400'>Detalhes</p>
 </Link>
 </div>
+<h2 className='text-xl font-medium'> {certifical.date}</h2>
 </div>
 </>
   )

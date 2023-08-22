@@ -37,7 +37,7 @@ const putHandler= async (req:any,res:any) => {
         certifical.slug = req.body.slug || certifical.slug;
         certifical.category = req.body.category || certifical.category;
         certifical.image = req.body.image || certifical.image;
-        certifical.price = req.body.price || certifical.price;
+        certifical.data = req.body.data || certifical.data;
         certifical.description = req.body.description || certifical.description;
         certifical.contact = req.body.contact || certifical.contact;
         await certifical.save(); 

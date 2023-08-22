@@ -25,7 +25,7 @@ const postHandler = async (req:any, res:any) => {
         slug: 'insira-slug-sem-espaço-minusculas-sem-acentos' + Math.random(),
         category: 'insira a categoria com letras minusculas e sem espaços',
         image: '',
-        
+        date:'00/00/0000',
         description: 'Insira a descrição da certificação',
         contact:'Insira o contato do vendedor'
     });

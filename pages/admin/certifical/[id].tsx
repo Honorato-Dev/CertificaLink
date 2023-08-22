@@ -14,7 +14,7 @@ type FormValues = {
     slug:string;
     category:string; 
     image:File; 
-    
+    date:string;
     description: string;
     contact:string;
    };
@@ -59,7 +59,7 @@ const AdminCertificalEditScreen = () => {
                 setValue('slug', data.slug);
                 setValue('category', data.category);
                 setValue('image', data.image);
-                
+                setValue('date', data.date);
                 setValue('description', data.description);
                 setValue('contact', data.contact);
                 
@@ -97,11 +97,11 @@ const AdminCertificalEditScreen = () => {
         }
      }
 
-    const submitHandler = async ({name, category, slug, image,  description,  contact }:any) => {
+    const submitHandler = async ({name, category, slug, image, date, description,  contact }:any) => {
        try{
         dispatch({type:'UPDATE_REQUEST'});
         await axios.put(`/api/admin/certificals/${certificalId}`, {
-            name, slug,  category, image, description, contact   
+            name, slug,  category, image,date, description, contact   
         });
         dispatch({type:'UPDATE_SUCCESS'});
         toast.success('Produto atualizado com sucesso!')
@@ -151,7 +151,7 @@ const AdminCertificalEditScreen = () => {
                             <h1 className='mb-4 text-3xl font-semibold pt-8'>{` Certifical ${certificalId}`}</h1>
                             <div className='bg-white rounded-md bg-opacity-80 m-2 p-2'>
                             <div className='mb-4'>
-                                <label className='font-semibold' htmlFor='name' >Nome <span className='text-graym '>(Insira o nome do produto)</span></label>
+                                <label className='font-semibold' htmlFor='name' >Nome <span className='text-graym '>(Insira o nome da certificação)</span></label>
                                 <input 
                                 type='text' 
                                 className='w-full' 
@@ -162,7 +162,7 @@ const AdminCertificalEditScreen = () => {
                                {errors.name && (<div className='text-red'>{errors.name.message}</div>)}
                             </div>
                             <div className='mb-4'>
-                                <label className='font-semibold' htmlFor='price' >Slug <span className='text-graym '>(Insira o slug do produto sem letras maiúsculas, sem acentos, sem caracteres especiais EX: @;!;$;% , use - pra espaço EX: guarda-roupas-casal   )</span></label>
+                                <label className='font-semibold' htmlFor='price' >Slug <span className='text-graym '>(Insira o slug da certificação sem letras maiúsculas, sem acentos, sem caracteres especiais EX: @;!;$;% , use - pra espaço EX: guarda-roupas-casal   )</span></label>
                                 <input 
                                 type='text' 
                                 className='w-full' 
@@ -228,13 +228,24 @@ const AdminCertificalEditScreen = () => {
                                 />
                                {errors.contact && (<div className='text-red'>{errors.contact.message}</div>)}
                             </div>
+                               <div className='mb-4'>
+                                <label className='font-semibold' htmlFor='image' >Data <span className='text-graym '>(Insira a data de emissão no formato: 00/00/0000)</span></label>
+                                <input 
+                                type='text' 
+                                className='w-full' 
+                                id='date' 
+                                
+                                {...register('date',{required: 'Insira a data de emissão'})}
+                                />
+                               {errors.contact && (<div className='text-red'>{errors.contact.message}</div>)}
+                            </div>
                             <div className='mb-4'>
                                 <button disabled={loadingUpdate} className='primary-button'>
                                     {loadingUpdate ? 'Loading' : 'Update'}
                                 </button>
 
                             </div>
-                            <Link className="text-indigo600 font-semibold flex py-2" href="/admin/products">
+                            <Link className="text-indigo600 font-semibold flex py-2" href="/admin/certificals">
         <span className='py-1 px-1 '><BiArrowBack/></span>
         Voltar
       </Link>

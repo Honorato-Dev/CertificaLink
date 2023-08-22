@@ -28,14 +28,7 @@ const CertificalScreen = ({ certificals }: any) => {
     <Layout title="Página Certificados">
       <div className='bg-white bg-opacity-80 m-8 rounded-md'>
 
-        <div className="flex justify-center md:hidden absolute   lg:hidden absolute ">
-        <Link
-          href="/searchproduct"
-          className="rounded  bg-green500 p-1 text-sm dark:text-black"
-        >
-          <BiSearch className="h-10 w-10" />
-        </Link>
-      </div>
+        
       <div className="py-10">
         <form
           onSubmit={submitHandler}

@@ -1,29 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 let bcrypt = require('bcryptjs');
-interface News {
-    title:string,
-    slug:string,
-    data:string,
-    category: string,
-    image:string,
-    description: string
-    isFeatured?: boolean;
-    banner?: string;
-  
-}
-
-interface Services {
-    name:string,
-    company:string,
-    slug:string,
-    category:string,
-    image:string,
-    description:string,
-    location:string,
-    schedule:string,
-    contact:string
-
-}
 
 
 

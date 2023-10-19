@@ -85,7 +85,7 @@ const CertificalScreen = (props: any) => {
               <p className="text-xl font-medium">{certifical.description}</p>
             </div>
           </div>
-          <div>
+          <div className='p-4'>
             <h1 className="mb-4 text-3xl font-semibold pt-8">{` CL -  ${certifical._id}`}</h1>
           </div>
         </div>

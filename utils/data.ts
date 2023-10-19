@@ -33,7 +33,7 @@ interface Certificals {
     category:string;
     image:string;
     description:string;
-    date:string;
+    date?:string;
     contact:string;
 
 }
@@ -56,8 +56,8 @@ const data:Data = {
     users:[
         {
            name:'Admin',
-           email:'admin@parquedasarvores.com',
-           password:bcrypt.hashSync('thmpv77d6f'),
+           email:'admin@certificalink.com',
+           password:bcrypt.hashSync('123456'),
            isAdmin: true, 
         },
        
@@ -71,7 +71,7 @@ const data:Data = {
             category:'moveis',
             image:'/images/cadeiradeplastico.jpeg',
             description:'cadei ra de plastico nova',
-            date:'',
+            date:'10/09/2011',
             contact:'7198765-1233'
         },
         {
@@ -80,7 +80,7 @@ const data:Data = {
             category:'eletrodomestico',
             image:'/images/maquinadelavar.jpeg',
             description:'Maquina de lavar em excelente estado',
-            date:'',
+            date:'10/12/2022',
             contact:'7198765-1233'
         },
        

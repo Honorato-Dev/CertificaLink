@@ -60,7 +60,7 @@ const CertificalScreen = (props: any) => {
           <div className="px-3 py-3">
             <div className="flex justify-center py-8 ">
               <p className="text-3xl font-semibold   p-2">
-                ###{' '}
+                {' '}
                 <span className="text-3xl font-semibold ">
                   {certifical.date}
                 </span>

@@ -1,7 +1,11 @@
 # CertificaLink
 ![certifialink-layout](https://github.com/Honorato-Dev/tech-quiz/assets/101150943/a2397a61-aa34-4cce-b208-722161f3f873)
 
-Try it: https://certifica-link.vercel.app/
+ - Try it: https://certifica-link.vercel.app/
+
+ - To manage data use admin -> 
+1. Access: admin@certificalink.com
+2. Password:12345678
 
 #### Certificate Saver is a web application built with Next.js, React, MongoDB, and Tailwind CSS. It allows users to easily save certificates by taking a photo from any device. This app provides a convenient solution for individuals or organizations to digitally store and manage their certificates securely.
 

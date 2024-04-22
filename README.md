@@ -78,3 +78,6 @@ npm install
     -  React: https://reactjs.org/
     -  MongoDB: https://www.mongodb.com/
     - Tailwind CSS: https://tailwindcss.com/
+  
+     ## Contact
+      - For any inquiries or support, please contact us at honorato.ofc@gmail.com.

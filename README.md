@@ -44,4 +44,37 @@ npm install
       CLOUDINARY_SECRET=
       CLOUDINARY_URL=
       ```
-     
+ 5. Start the development server:
+    ```bash
+    npm run dev
+    ```
+ 6. Open http://localhost:3000 in your web browser to access the application.
+   
+    ### Deployment
+1. Build the project
+       ```bash
+        npm run buid
+       ```
+2. Start the server:
+       ```bash
+       npm start
+       ```
+
+   ## Contributing
+  
+   Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+    - Fork the repository.
+    - Create a new branch (git checkout -b feature/your-feature-name).
+    - Make your changes and commit them (git commit -am 'Add some feature').
+    - Push to the branch (git push origin feature/your-feature-name).
+    - Create a new pull request.
+
+    ## License
+     This project is licensed under the MIT License - see the LICENSE file for details.
+
+    ## Acknowledgements
+    -  Next.js: https://nextjs.org/
+    -  React: https://reactjs.org/
+    -  MongoDB: https://www.mongodb.com/
+    - Tailwind CSS: https://tailwindcss.com/

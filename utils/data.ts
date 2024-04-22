@@ -44,21 +44,31 @@ const data:Data = {
     certificals:[
         {
             name:'Curso 1',
-            slug:'cadeira-de-plastico',
+            slug:'curso1',
             category:'tech',
-            image:'',
-            description:'curso 1',
-            duration:'',
+            image:'/public/images/certifical01.jpg',
+            description:'curso1',
+            duration:'d/h',
             date:'10/09/2011',
             contact:'7198765-1233'
         },
         {
             name:'Curso 2',
-            slug:'maquina-de-lavar',
+            slug:'curso2',
             category:'heath',
-            image:'',
+            image:'/public/images/certifical02.jpg',
             description:'curso 2',
-            duration:'',
+            duration:'d/h',
+            date:'10/12/2022',
+            contact:'7198765-1233'
+        },
+        {
+            name:'Curso 3',
+            slug:'curso3',
+            category:'heath',
+            image:'/public/images/certifical03.jpg',
+            description:'curso 3',
+            duration:'d/h',
             date:'10/12/2022',
             contact:'7198765-1233'
         },

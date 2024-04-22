@@ -95,42 +95,17 @@ const AdmincertificalsScreen = () => {
     }
   return (
     <Layout title='Certificals Admin'>
-     <div className='grid md:grid-cols-4 md:gap-5'>
-            <div className='text-indigo600'>
-                <ul>
-                    <li>
-                        <Link className='text-indigo ' href="/admin/dashboard">
-                            <span className='bg-white bg-opacity-80 p-1 rounded-md'>Painel Principal</span>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className='text-indigo bg-white bg-opacity-80 p-1 rounded-md' href='/admin/news'>Mural</Link>
-                    </li>
-                    <li>
-                        <Link className='text-indigo bg-white bg-opacity-80 p-1 rounded-md' href='/admin/services'>Serviços</Link>
-                    </li>
-                    {/* <li>
-                        <Link className='text-indigo' href='/admin/vacancies'>Vagas</Link>
-                    </li> */}
-                    <li>
-                        <Link className='text-indigo' href='/admin/certificals'>
-                        <span className='font-bold text-xl bg-white bg-opacity-80 p-1 rounded-md'>Vendas</span></Link>
-                    </li>
-                    <li>
-                        <Link className='text-indigo bg-white bg-opacity-80 p-1 rounded-md' href='/admin/users'>Usuários</Link>
-                    </li>
-                    
-                </ul>
-            </div>
-            <div className='overflow-x-auto md:col-span-3'>
+     <div className='f'>
+    
+            <div className='flex flex-col text-center  space-y-16 h-screen '>
                 <div className='flex justify-between'>
-                   <h1 className='mb-4 text-3xl font-semibold'>Certificals</h1>
+                   <h1 className='mb-4 text-center text-3xl font-semibold'>Certificals</h1>
                    {loadingDelete && <div>Deleting item...</div>}
                    <button 
                         disabled={loadingCreate} 
                         onClick={createHandler} 
-                        className='primary-button'
-                        >{loadingCreate ? 'Loading': 'Criar Certificado'}
+                        className='bg-blue-300 border border-zinc-600 p-3 hover:bg-blue-500'
+                        >{loadingCreate ? 'Loading': 'CREATE NEW'}
                      </button>
                 </div>
                 
@@ -139,17 +114,17 @@ const AdmincertificalsScreen = () => {
                  ): error ? (
                  <div className='alert-error'>{error}</div>
                  ):(
-                 <div className='overflow-x-auto bg-white rounded-md bg-opacity-80 m-2 p-2 '>
-                    <table className='min-w-full'>
+                 <div className=' bg-white rounded-md bg-opacity-80 m-2 p-2 '>
+                    <table className='w-full'>
                        <thead className='border-b'>
                        <tr>
                                 <th className='px-5 text-left'>ID</th>
                                 <th className='p-5 text-left'>COURSE</th>
-                                <th className='p-5 text-left'>CATEGORIA</th>
-                                <th className='p-5 text-left'>CONTATO</th>
+                                <th className='p-5 text-left'>CATEGORY</th>
+                                <th className='p-5 text-left'>CONTACT</th>
                                 <th className='p-5 text-left'>DATE</th>
-                                
-                                <th className='p-5 text-left'>AÇÕES</th>
+                                <th className='p-5 text-left'>DURATION</th>
+                                <th className='p-5 text-left'>ACIONS</th>
                             </tr>
                        </thead> 
                        <tbody>
@@ -161,9 +136,10 @@ const AdmincertificalsScreen = () => {
                                 <td className='p-5'>{certifical.category}</td>
                                 <td className='p-5'>{certifical.contact}</td>
                                 <td className='p-5'>{certifical.date}</td>
+                                <td className='p-5'>{certifical.duration}</td>
                                 <td className='p-5 flex '>
                                     <div>
-                                    <Link className='edit-button' href={`/admin/certifical/${certifical._id}`} passHref >Editar</Link> &nbsp; 
+                                    <Link className='edit-button' href={`/admin/certifical/${certifical._id}`} passHref >Edit</Link> &nbsp; 
                                     </div>
                                     <div>
                                     <button onClick={()=> deleteHandler(certifical._id)} className='delete-button'>

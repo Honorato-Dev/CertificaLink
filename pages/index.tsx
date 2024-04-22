@@ -15,15 +15,15 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <div className="flex flex-col text-center  space-y-16 h-screen ">
+        <div className="flex flex-col text-center  space-y-20 h-screen ">
           <div className={bowlby.className}>
             <h1 className='text-4xl  lg:text-6xl bg-gradient-to-r from-blue-200 via-blue-400 to-blue-500 text-transparent bg-clip-text'>CertificaLink</h1>
           </div>
           <div className=''>
             <Slider  slides={slides}/>
           </div>
-          <div>
-          <Link className='' href='/'>Get Started</Link>
+          <div className=''>
+          <Link className=' border p-6 rounded-md bg-indigo-600 text-white font-bold' href='/login?redirect=/admin/certificals'>Get Started</Link>
           </div>
         </div>
       </Layout>

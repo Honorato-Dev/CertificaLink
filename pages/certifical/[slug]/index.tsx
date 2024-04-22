@@ -29,7 +29,7 @@ const CertificalScreen = (props: any) => {
   return (
     <Layout title="">
       <div className="py-8">
-        <Alert message="O App CertificaLink não garante veracidae das informações e não se responsabiliza por falsa informação nesta plataforma." />
+        <Alert message="The CERTIFICALINK APP does not guarantee the information and is not responsible for false information on this platform." />
       </div>
       <div className="  bg-white bg-opacity-80 mt-8 mb-8 rounded-md">
         <Link
@@ -39,7 +39,7 @@ const CertificalScreen = (props: any) => {
           <span className="py-1 px-1 ">
             <BiArrowBack />
           </span>
-          Voltar
+          To go back
         </Link>
 
         <div className="flex justify-center py-6">
@@ -66,8 +66,16 @@ const CertificalScreen = (props: any) => {
                 </span>
               </p>
             </div>
+            <div className="flex justify-center py-8 ">
+              <p className="text-3xl font-semibold   p-2">
+                {' '}
+                <span className="text-3xl font-semibold ">
+                  {certifical.duration}
+                </span>
+              </p>
+            </div>
             <p className="pt-6 flex  font-semibold">
-              Instituição{' '}
+              Institution{' '}
               <span className="py-1 px-2">
                 <BsArrowDownLeft />
               </span>
@@ -85,7 +93,7 @@ const CertificalScreen = (props: any) => {
               <p className="text-xl font-medium">{certifical.description}</p>
             </div>
           </div>
-          <div className='p-4'>
+          <div className="p-4">
             <h1 className="mb-4 text-3xl font-semibold pt-8">{` CL -  ${certifical._id}`}</h1>
           </div>
         </div>

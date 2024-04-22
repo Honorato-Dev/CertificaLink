@@ -14,11 +14,11 @@ const CertificalScreen = ({ certificals }: any) => {
   const router = useRouter();
 
   return (
-    <Layout title="Página Certificados">
-      <div className="bg-white bg-opacity-80 m-8 rounded-md">
+    <Layout title="Certified page">
+      <div className=" m-8 rounded-sm">
         <h1 className="flex justify-center text-sm font-semibold py-12 md:text-2xl lg:text:2xl">
           <span className="  rounded-full uppercase tracking-[20px]">
-            Certificados
+            Certificates
           </span>
         </h1>
         <div className="grid grid-cols-1 m-4 gap-2 pt-8 md:grid-cols-3 lg:grid-cols-2">
@@ -44,5 +44,5 @@ export async function getServerSideProps() {
     },
   };
 }
-CertificalScreen.auth = true;
+
 export default CertificalScreen;

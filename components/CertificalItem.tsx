@@ -27,11 +27,14 @@ const CertificalItem = ({certifical}:any) => {
 </div>
 <div className='flex justify-center py-4'>
   <Link href={`/certifical/${certifical.slug}`}>
-    <p className='text-indigo400'>Detalhes</p>
+    <p className='text-indigo-400'>Details</p>
 </Link>
 </div>
-<h2 className='text-xl font-medium'> {certifical.date}</h2>
+<h2 className='text-xl m-3 font-medium'> {certifical.date}</h2>
+<h2 className='text-xl m-3 font-medium'> {certifical.duration}</h2>
 </div>
+
+
 </>
   )
 }

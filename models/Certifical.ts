@@ -6,8 +6,8 @@ const certificalSchema = new mongoose.Schema(
         slug: {type: String, required:true, unique:true},
         category: {type: String, required:false},
         image: {type: String},
-        description: {type: String, required:false},
-        duration: {type:String, required:false},
+        description: {type: String, required:true},
+        duration: {type:String, required:true},
         contact:{type: String, required:false},
         date: {type: String, required:false},
         

@@ -59,10 +59,10 @@ const LoginScreen = () => {
               id="email"
               autoFocus
               {...register('email', {
-                required: 'Por favor insira um email válido',
+                required: 'Please enter a valid email',
                 pattern: {
                   value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$/i,
-                  message: 'Por favor use um formato de email válido',
+                  message: 'Por please use a valid email format',
                 },
               })}
             />
@@ -71,17 +71,17 @@ const LoginScreen = () => {
             )}
           </div>
           <div className="mb-4">
-            <label htmlFor="password">Senha</label>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               className="w-full"
               id="password"
               autoFocus
               {...register('password', {
-                required: 'Por favor insira uma senha válida',
+                required: 'Please enter a valid password',
                 minLength: {
                   value: 5,
-                  message: 'A senha dever ter no mínimo 5 caracteres ',
+                  message: 'The password must have at least 5 characters',
                 },
               })}
             />
@@ -90,18 +90,21 @@ const LoginScreen = () => {
             )}
           </div>
           <div className="mb-4">
-            <button className="login-button">Login</button>
+            <button className="border border-zinc-500 bg-indigo-300 hover:bg-indigo-500 p-3 rounded-sm">Login</button>
           </div>
           <div className="mb-4">
-            Ainda não se cadastrou? &nbsp;
+           Havent you registered yet? &nbsp;
             <Link
-              className="text-indigo600  rounded-lg p-1 font-semibold"
+              className="text-indigo-600  rounded-lg p-1 font-semibold"
               href="/register"
             >
-              Registrar
+              Sing-up
             </Link>
           </div>
         </form>
+        <p>To manage app:</p>
+        <p>Admin: admin@certificalink.com</p>
+        <p>Password: 123456</p>
       </div>
     </Layout>
   );

@@ -63,13 +63,13 @@ const Layout = ({ children, title }: any) => {
               ) : session?.user ? (
                 <Menu as="div" className="relative inline-block">
                   <Menu.Button className="text-blue-600 flex">
-                    <p className="px-2 font-bold">Olá</p>
+                    <p className="px-2 font-bold">Hello</p>
                     {session.user.name}
                   </Menu.Button>
                   <Menu.Items className="absolute right-0 w-56 origin-top-right shadow-lg">
                     <Menu.Item>
                       <DropdownLink className="dropdown-link" href="/profile">
-                        Perfil
+                        Profile
                       </DropdownLink>
                     </Menu.Item>
                     <Menu.Item>
@@ -83,7 +83,7 @@ const Layout = ({ children, title }: any) => {
                           className="dropdown-link"
                           href="/admin/certificals"
                         >
-                          Painel Admin
+                          Dashboard
                         </DropdownLink>
                       </Menu.Item>
                     )}
@@ -93,7 +93,7 @@ const Layout = ({ children, title }: any) => {
                         href="/#"
                         onClick={logoutClickHandler}
                       >
-                        Sair
+                        Sign-out
                       </Link>
                     </Menu.Item>
                   </Menu.Items>
@@ -117,20 +117,20 @@ const Layout = ({ children, title }: any) => {
                 </li>
 
                 <li>
-                  <Link className=" " href="/login?redirect=/certificals">
-                    Certificados
+                  <Link className=" " href="/certificals">
+                    Certificates
                   </Link>
                 </li>
               
                 <li>
                   <Link className="" href="/">
-                    Sobre
+                    About
                   </Link>
                 </li>
 
                 <li>
-                  <Link className="" href="/contact">
-                    Contato
+                  <Link className="" href="/https://github.com/Honorato-Dev">
+                    Contact
                   </Link>
                 </li>
               </ul>
@@ -208,22 +208,7 @@ const Layout = ({ children, title }: any) => {
             </p>
           </div>
           <div className="flex justify-between px-2">
-            <Link
-              className="flex px-1"
-              href="https://www.instagram.com/cparquedasarvores/"
-            >
-              <BsInstagram className="w-5 h-5" />
-            </Link>
-            <Link
-              className="flex pl-3 pr-2"
-              href="https://api.whatsapp.com/send?phone=5571999426443&text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es"
-            >
-              <BsWhatsapp className="w-5 h-5" />
-            </Link>
-
-            <Link className="flex pl-1 pr-2" href="/contact">
-              <FiMail className="w-5 h-5" />
-            </Link>
+         
             <Link
               className="flex pl-1 pr-3"
               href="https://api.whatsapp.com/send?phone=5571987840407&text=Ol%C3%A1,%20gostaria%20de%20informa%C3%A7%C3%B5es"

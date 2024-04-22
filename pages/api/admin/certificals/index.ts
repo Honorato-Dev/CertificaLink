@@ -26,7 +26,7 @@ const postHandler = async (req:any, res:any) => {
         category: 'insira a categoria',
         image: '',
         date:'00/00/0000',
-        duration:'',
+        duration:'d/h',
         description: 'Insira a descrição da certificação',
         contact:'insira o contato'
     });

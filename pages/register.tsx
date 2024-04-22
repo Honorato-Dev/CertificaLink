@@ -17,18 +17,18 @@ interface LoginFormValues {
 
 const validationSchema = Yup.object({
   name: Yup.string()
-    .min(4, 'O nome de usuário precisa ter no mínimo 4 caracteres')
-    .required('O nome de usuário é obrigtatório'),
+    .min(4, 'The username needs to have at least 4 characters')
+    .required('The username is mandatory'),
   email: Yup.string()
-    .email('Formato de email inválido')
-    .required('O email é obrigatório'),
+    .email('Invalid email format')
+    .required('The email is mandatory'),
   password: Yup.string()
-    .min(6, 'A senha precisa ter no mínimo 6 caracteres')
-    .required('A senha é obrigadoria'),
+    .min(6, 'The password needs to have at least 6 characters')
+    .required('The password is mandatory'),
   confirmpassword: Yup.string()
-    .min(6, 'A confirmação de senha precisa ter no mínimo 4 caracteres')
-    .required('A confirmação de senha é obrigatória')
-    .oneOf([Yup.ref('password')], 'As senha precisam combinar'),
+    .min(6, 'Password confirmation needs to have at least 4 characters')
+    .required('Password confirmation is mandatory')
+    .oneOf([Yup.ref('password')], 'Password need to combine'),
 });
 
 const initialValues: LoginFormValues = {
@@ -76,11 +76,11 @@ const RegisterScreen = () => {
         onSubmit={handleSubmit}
       >
         <Form className="mx-auto max-w-screen-md">
-          <h1 className="mb-4 text-3xl font-semibold">Criar nova conta</h1>
+          <h1 className="mb-4 text-3xl font-semibold">Create New Account</h1>
           <div className="bg-white p-3 rounded-md bg-opacity-80">
             <div className="mb-4">
               <label htmlFor="email" className="text-lg font-semibold">
-                Nome de usuário
+                User name
               </label>
               <Field
                 autoFocus
@@ -89,7 +89,7 @@ const RegisterScreen = () => {
                 id="name"
                 name="name"
               />
-              <div className="text-red">
+              <div className="text-red-600">
                 <ErrorMessage name="name" />
               </div>
             </div>
@@ -105,13 +105,13 @@ const RegisterScreen = () => {
                 id="email"
                 name="email"
               />
-              <div className="text-red">
+              <div className="text-red-600">
                 <ErrorMessage name="email" />
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="password" className="text-lg font-semibold">
-                Senha
+                Password
               </label>
               <Field
                 autoFocus
@@ -120,13 +120,13 @@ const RegisterScreen = () => {
                 id="password"
                 name="password"
               />
-              <div className="text-red">
+              <div className="text-red-600">
                 <ErrorMessage name="password" />
               </div>
             </div>
             <div className="mb-4">
               <label htmlFor="password" className="text-lg font-semibold">
-                Confirmar senha
+                Confirm password
               </label>
               <Field
                 autoFocus
@@ -135,13 +135,13 @@ const RegisterScreen = () => {
                 id="confirmpassword"
                 name="confirmpassword"
               />
-              <div className="text-red">
+              <div className="text-red-600">
                 <ErrorMessage name="confirmpassword" />
               </div>
             </div>
             <div className="mb-4">
-              <button type="submit" className="primary-button">
-                Registrar
+              <button type="submit" className="border border-zinc-600 p-2 rounded-sm bg-green-300 hover:bg-green-500">
+                Register
               </button>
             </div>
           </div>

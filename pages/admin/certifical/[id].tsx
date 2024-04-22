@@ -144,38 +144,7 @@ const AdminCertificalEditScreen = () => {
   return (
     <Layout title={`Certifical: ${certificalId}`}>
       <div className="grid md:grid-cols-4 md:gap-5">
-        <div className="text-indigo600">
-          <ul>
-            <li>
-              <Link className="text-indigo" href="/admin/dashboard">
-                <p>Painel Principal</p>
-              </Link>
-            </li>
-            <li>
-              <Link className="text-indigo" href="/admin/news">
-                Noticias
-              </Link>
-            </li>
-            <li>
-              <Link className="text-indigo" href="/admin/services">
-                Serviços
-              </Link>
-            </li>
-            {/* <li>
-                        <Link className='text-indigo' href='/admin/vacancies'>Vagas</Link>
-                    </li> */}
-            <li>
-              <Link className="text-indigo" href="/admin/products">
-                <p className="font-bold text-xl">Vendas</p>
-              </Link>
-            </li>
-            <li>
-              <Link className="text-indigo" href="/admin/users">
-                Usuários
-              </Link>
-            </li>
-          </ul>
-        </div>
+        
         <div className="md:col-span-3">
           {loading ? (
             <div>Loading...</div>
@@ -366,7 +335,7 @@ const AdminCertificalEditScreen = () => {
                   )}
                 </div>
                 <div className="mb-4">
-                  <button disabled={loadingUpdate} className="primary-button">
+                  <button disabled={loadingUpdate} className="border border-zinc-400 p-3 bg-blue-300 hover:bg-blue-500">
                     {loadingUpdate ? 'Loading' : 'Update'}
                   </button>
                 </div>

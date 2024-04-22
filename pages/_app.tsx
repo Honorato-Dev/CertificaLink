@@ -38,12 +38,12 @@ export default function App({ Component, pageProps:{session, ...pageProps} }: Cu
     
       {Component.auth ? (
         <Auth adminOnly={Component.auth.adminOnly}>
-          <div className="bg-stone-300">
+          <div className="">
             <Component {...pageProps} />
           </div>
         </Auth>
       ):(
-        <div className="bg-stone-300">
+        <div className="">
           <Component {...pageProps} />
         </div>
       )}

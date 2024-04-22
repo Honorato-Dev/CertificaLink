@@ -9,6 +9,7 @@ interface Certificals {
     category:string;
     image:string;
     description:string;
+    duration: string;
     date?:string;
     contact:string;
 
@@ -42,20 +43,22 @@ const data:Data = {
     
     certificals:[
         {
-            name:'cadeira de plastico',
+            name:'Curso 1',
             slug:'cadeira-de-plastico',
-            category:'moveis',
-            image:'/images/cadeiradeplastico.jpeg',
-            description:'cadei ra de plastico nova',
+            category:'tech',
+            image:'',
+            description:'curso 1',
+            duration:'',
             date:'10/09/2011',
             contact:'7198765-1233'
         },
         {
-            name:'Maquina de lavar',
+            name:'Curso 2',
             slug:'maquina-de-lavar',
-            category:'eletrodomestico',
-            image:'/images/maquinadelavar.jpeg',
-            description:'Maquina de lavar em excelente estado',
+            category:'heath',
+            image:'',
+            description:'curso 2',
+            duration:'',
             date:'10/12/2022',
             contact:'7198765-1233'
         },

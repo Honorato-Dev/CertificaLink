@@ -72,11 +72,16 @@ const Layout = ({ children, title }: any) => {
                         Perfil
                       </DropdownLink>
                     </Menu.Item>
+                    <Menu.Item>
+                      <DropdownLink className="dropdown-link" href="/certificals">
+                        Certificals
+                      </DropdownLink>
+                    </Menu.Item>
                     {session.user.isAdmin && (
                       <Menu.Item>
                         <DropdownLink
                           className="dropdown-link"
-                          href="/admin/dashboard"
+                          href="/admin/certificals"
                         >
                           Painel Admin
                         </DropdownLink>
@@ -106,25 +111,25 @@ const Layout = ({ children, title }: any) => {
             <div className="font-bold  ">
               <ul className="hidden absolute  left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
                 <li>
-                  <Link className="nav-bar" href="/">
+                  <Link className="" href="/">
                     Home
                   </Link>
                 </li>
 
                 <li>
-                  <Link className="nav-bar " href="/login?redirect=/certificals">
+                  <Link className=" " href="/login?redirect=/certificals">
                     Certificados
                   </Link>
                 </li>
               
                 <li>
-                  <Link className="nav-bar" href="/">
+                  <Link className="" href="/">
                     Sobre
                   </Link>
                 </li>
 
                 <li>
-                  <Link className="nav-bar" href="/contact">
+                  <Link className="" href="/contact">
                     Contato
                   </Link>
                 </li>
@@ -155,6 +160,16 @@ const Layout = ({ children, title }: any) => {
                       Certificados
                     </Link>
                   </Menu.Item>
+                 
+                      <Menu.Item>
+                        <DropdownLink
+                          className="dropdown-link"
+                          href="/admin/certificals"
+                        >
+                          Painel Admin
+                        </DropdownLink>
+                      </Menu.Item>
+                   
 
                   <Menu.Item>
                     <Link

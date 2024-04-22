@@ -29,7 +29,7 @@ const CertificalScreen = (props: any) => {
   return (
     <Layout title="">
       <div className="py-8">
-        <Alert message="O condomínio Parque das Árvores não se responsabiliza por nenhuma transação entre condôminos e prestadores de serviço nesta plataforma." />
+        <Alert message="O App CertificaLink não garante veracidae das informações e não se responsabiliza por falsa informação nesta plataforma." />
       </div>
       <div className="  bg-white bg-opacity-80 mt-8 mb-8 rounded-md">
         <Link
@@ -67,18 +67,18 @@ const CertificalScreen = (props: any) => {
               </p>
             </div>
             <p className="pt-6 flex  font-semibold">
-              Clique no ícone para contato{' '}
+              Instituição{' '}
               <span className="py-1 px-2">
                 <BsArrowDownLeft />
               </span>
             </p>
             <div className="flex ">
-              <button
+              {/* <button
                 onClick={redirecionarWhatsapp}
                 className=" bg-green-700 p-3 mb-4 rounded text-base font-semibold"
               >
                 <BsWhatsapp />
-              </button>
+              </button> */}
               <p className="flex py-1 px-3 text-xl ">{certifical.contact}</p>
             </div>
             <div className="flex justify-center py-8  mb-5">

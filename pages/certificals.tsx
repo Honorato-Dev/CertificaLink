@@ -21,7 +21,7 @@ const CertificalScreen = ({ certificals }: any) => {
             Certificados
           </span>
         </h1>
-        <div className="grid grid-cols-1 gap-2 pt-8 md:grid-cols-3 lg:grid-cols-2">
+        <div className="grid grid-cols-1 m-4 gap-2 pt-8 md:grid-cols-3 lg:grid-cols-2">
           {/* LastElement */}
           {originalArray.map((certifical: any) => (
             <CertificalItem

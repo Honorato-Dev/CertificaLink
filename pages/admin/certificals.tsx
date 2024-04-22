@@ -144,11 +144,11 @@ const AdmincertificalsScreen = () => {
                        <thead className='border-b'>
                        <tr>
                                 <th className='px-5 text-left'>ID</th>
-                                <th className='p-5 text-left'>NOME</th>
-                                <th className='p-5 text-left'>DATA</th>
+                                <th className='p-5 text-left'>COURSE</th>
                                 <th className='p-5 text-left'>CATEGORIA</th>
                                 <th className='p-5 text-left'>CONTATO</th>
-                                <th className='p-5 text-left'>DATA</th>
+                                <th className='p-5 text-left'>DATE</th>
+                                
                                 <th className='p-5 text-left'>AÇÕES</th>
                             </tr>
                        </thead> 

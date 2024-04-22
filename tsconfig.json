@@ -27,6 +27,6 @@
     "utils/db.js",
     "utils/error.js",
     "pages/api/admin/orders/index.ts"
-  ],
+, "pages/api/auth/[...nextauth].js"  ],
   "exclude": ["node_modules"]
 }

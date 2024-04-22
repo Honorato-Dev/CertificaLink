@@ -5,13 +5,13 @@ import db from "@/utils/db";
 
 
 const handler = async (req:any, res:any) => {
-    const session:any = await getSession({ req});
-    if (!session || (session && !session.user.isAdmin)){
-        return res.status(401).send('signin required');
-    }
+    // const session:any = await getSession({ req});
+    // if (!session || (session && !session.user.isAdmin)){
+    //     return res.status(401).send('signin required');
+    // }
 
-    // eslint-disable-next-line no-unused-vars
-    const { user } = session;
+    // // eslint-disable-next-line no-unused-vars
+    // const { user } = session;
     if(req.method === 'GET'){
         return getHandler(req, res);
     }else if (req.method === 'PUT'){
@@ -37,8 +37,9 @@ const putHandler= async (req:any,res:any) => {
         certifical.slug = req.body.slug || certifical.slug;
         certifical.category = req.body.category || certifical.category;
         certifical.image = req.body.image || certifical.image;
-        certifical.data = req.body.data || certifical.data;
+        certifical.date = req.body.date || certifical.date;
         certifical.description = req.body.description || certifical.description;
+        certifical.duration = req.body.duration || certifical.duration;
         certifical.contact = req.body.contact || certifical.contact;
         await certifical.save(); 
         await db.disconnect();

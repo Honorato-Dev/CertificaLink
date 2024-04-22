@@ -129,7 +129,7 @@ const Layout = ({ children, title }: any) => {
                 </li>
 
                 <li>
-                  <Link className="" href="/https://github.com/Honorato-Dev">
+                  <Link className="" href="https://github.com/Honorato-Dev">
                     Contact
                   </Link>
                 </li>

@@ -124,7 +124,7 @@ const AdmincertificalsScreen = () => {
                                 <th className='p-5 text-left'>CONTACT</th>
                                 <th className='p-5 text-left'>DATE</th>
                                 <th className='p-5 text-left'>DURATION</th>
-                                <th className='p-5 text-left'>ACIONS</th>
+                                <th className='p-5 text-left'>ACTIONS</th>
                             </tr>
                        </thead> 
                        <tbody>

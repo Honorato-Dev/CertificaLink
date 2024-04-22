@@ -5,13 +5,12 @@ import db from '@/utils/db';
 import Certifical from '@/models/Certifical';
 import CertificalItem from '@/components/CertificalItem';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
+
 
 const CertificalScreen = ({ certificals }: any) => {
   const originalArray = certificals;
 
-  const [query, setQuery] = useState('');
-  const router = useRouter();
+  
 
   return (
     <Layout title="Certified page">

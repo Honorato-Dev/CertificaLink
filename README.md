@@ -30,3 +30,18 @@ cd CertificaLink
 ```bash
 npm install
 ```
+
+4. Set up environment variables:
+   - Create ".env" file in the root directory
+   - Define the following variables:
+
+      ```bash
+      MONGODB_URI=
+      NEXTAUTH_URL=
+      NEXTAUTH_SECRET=
+      NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+      NEXT_PUBLIC_CLOUDINARY_API_KEY=
+      CLOUDINARY_SECRET=
+      CLOUDINARY_URL=
+      ```
+     

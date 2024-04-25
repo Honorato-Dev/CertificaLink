@@ -29,7 +29,7 @@ body {
     @apply rounded  bg-green-300 py-2 px-4 shadow outline-none hover:bg-green-500 active:bg-green-700;
   }
   .dropdown-link {
-    @apply flex p-2 bg-white hover:bg-gray-300 bg-opacity-80 hover:bg-opacity-80 ;
+    @apply flex p-2  hover:bg-gray-300 bg-opacity-80 hover:bg-opacity-80 ;
 }
 .nav-bar {
   @apply flex p-2 text-white text-lg hover:text-green-500

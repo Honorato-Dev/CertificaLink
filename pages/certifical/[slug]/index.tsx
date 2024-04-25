@@ -28,7 +28,7 @@ const CertificalScreen = (props: any) => {
 
   return (
     <Layout title="">
-      <div className="py-8">
+      <div className="flex flex-col py-8 text-xs lg:text-base">
         <Alert message="The CERTIFICALINK APP doesn't guarantee the information and is not responsible for false information on this platform." />
       </div>
       <div className="  mt-8 mb-8 rounded-md">
@@ -43,22 +43,34 @@ const CertificalScreen = (props: any) => {
         </Link>
 
         <div className="flex justify-center py-6">
-          <h1 className="text-3xl font-semibold">
+          <h1 className=" text-xl lg:text-3xl font-semibold">
             <span className="  rounded-full p-2 ">{certifical.name}</span>
           </h1>
         </div>
 
         <div className="grid  md:grid-cols-1 md:gap-1">
-          <div className="flex flex-col items-center justify-center p-5 md:col-span-1">
-            <Image
+          <div className="flex   justify-center p-5 md:col-span-1">
+            <img
+            className='bg-white w-[380px] h-[250px] lg:w-[900px] lg:h-[640px]'
               src={certifical.image}
               alt={certifical.title}
-              width={840}
-              height={640}
+              
             />
           </div>
           <div className="flex justify-between px-3 py-3">
-            <div className=" ">
+          
+           
+            <div className=" flex flex-col max-w-xs lg:max-w-2xl">
+              <p className=" text-xs lg:text-xl font-medium">{certifical.description}</p>
+            </div>
+            
+            <div className="flex flex-col">
+          
+              <p className="text-xs lg:text-xl ">{certifical.contact}</p>
+            </div>
+            
+          </div>
+          <div className="flex flex-col ">
               <p className=" font-semibold   p-2">
                 {' '}
                 <span className="  text-xs  lg:text-2xl font-semibold ">
@@ -66,17 +78,6 @@ const CertificalScreen = (props: any) => {
                 </span>
               </p>
             </div>
-           
-            <div className="">
-              <p className=" text-xs lg:text-xl font-medium">{certifical.description}</p>
-            </div>
-            
-            <div className="">
-          
-              <p className="text-xs lg:text-xl ">{certifical.contact}</p>
-            </div>
-            
-          </div>
           <div className="p-4 flex justify-between">
             <h1 className="mb-4 text-base lg:text-3xl font-semibold pt-8">{` CL -  ${certifical._id}`}</h1>
             <h2 className="flex justify-center py-8 ">

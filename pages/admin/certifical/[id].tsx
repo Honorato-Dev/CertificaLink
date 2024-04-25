@@ -156,7 +156,7 @@ const AdminCertificalEditScreen = () => {
               onSubmit={handleSubmit(submitHandler)}
             >
               <h1 className="mb-4 text-3xl font-semibold pt-8">{` Certifical ${certificalId}`}</h1>
-              <div className="bg-white rounded-md bg-opacity-80 m-2 p-2">
+              <div className=" rounded-md bg-opacity-80 m-2 p-2">
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="name">
                     Name{' '}
@@ -181,9 +181,7 @@ const AdminCertificalEditScreen = () => {
                   <label className="font-semibold" htmlFor="price">
                     Slug{' '}
                     <span className="text-red-500 ">
-                      (Insert the SLUG of certification without capital letters, without
-                      accents, without special characters Ex: @;!; $;%, use - for
-                      Ex-space: )
+                      (OPIALIZED PERSONALIZED URL)
                     </span>
                   </label>
                   <input
@@ -331,7 +329,7 @@ const AdminCertificalEditScreen = () => {
                   )}
                 </div>
                 <div className="mb-4">
-                  <button disabled={loadingUpdate} className="border border-zinc-400 p-3 bg-blue-300 hover:bg-blue-500">
+                  <button disabled={loadingUpdate} className="border border-zinc-400 p-3 bg-blue-500 hover:bg-blue-700">
                     {loadingUpdate ? 'Loading' : 'Update'}
                   </button>
                 </div>

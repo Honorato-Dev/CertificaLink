@@ -6,7 +6,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Menu } from '@headlessui/react';
-
+import { useTheme } from 'next-themes'
 import { ImMenu } from 'react-icons/im';
 import Image from 'next/image';
 import { BsInstagram } from 'react-icons/bs';
@@ -14,8 +14,11 @@ import { BsWhatsapp } from 'react-icons/bs';
 import { BiSupport } from 'react-icons/bi';
 import { FiMail } from 'react-icons/fi';
 import DropdownLink from './DropdownLink';
+import { MdOutlineWbSunny } from "react-icons/md";
+import { FaMoon } from "react-icons/fa";
 
 const Layout = ({ children, title }: any) => {
+  const { theme, setTheme } = useTheme()
   const { status, data: session }: any = useSession();
   const logoutClickHandler = () => {
     signOut({ callbackUrl: '/login' });
@@ -44,11 +47,12 @@ const Layout = ({ children, title }: any) => {
                     />
                   </Link>
                 </div> */}
-            <div className="text-3xl py-3 flex items-center ">
+                
+            <div className=" text-3xl py-3 flex items-center ">
               <Link href="/">
                 <div className=" mt-8">
                   <Image
-                    className="bg-white rounded-full"
+                    className=" rounded-full"
                     src="/images/logo1.png"
                     alt="logo"
                     width={100}
@@ -56,6 +60,12 @@ const Layout = ({ children, title }: any) => {
                   />
                 </div>
               </Link>
+            </div>
+            <div className='flex space-x-6'>
+            <FaMoon className='w-5 h-5' onClick={() => setTheme('dark')}/>
+            
+            <MdOutlineWbSunny className='w-6 h-6 '  onClick={() => setTheme('light')}/>
+            
             </div>
             <div>
               {status === 'loading' ? (

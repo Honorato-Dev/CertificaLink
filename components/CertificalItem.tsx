@@ -11,7 +11,7 @@ const CertificalItem = ({certifical}:any) => {
     <Image 
      src={certifical.image}
      alt={certifical.name}
-     width={300}
+     width={500}
      height={300}
      className='rounded shadow items-center '
 

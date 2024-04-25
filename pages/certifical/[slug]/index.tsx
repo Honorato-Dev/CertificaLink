@@ -29,9 +29,9 @@ const CertificalScreen = (props: any) => {
   return (
     <Layout title="">
       <div className="py-8">
-        <Alert message="The CERTIFICALINK APP does not guarantee the information and is not responsible for false information on this platform." />
+        <Alert message="The CERTIFICALINK APP doesn't guarantee the information and is not responsible for false information on this platform." />
       </div>
-      <div className="  bg-white bg-opacity-80 mt-8 mb-8 rounded-md">
+      <div className="  mt-8 mb-8 rounded-md">
         <Link
           className="text-indigo600 font-semibold flex py-3 px-3"
           href="/certificals"
@@ -53,48 +53,40 @@ const CertificalScreen = (props: any) => {
             <Image
               src={certifical.image}
               alt={certifical.title}
-              width={640}
+              width={840}
               height={640}
             />
           </div>
-          <div className="px-3 py-3">
-            <div className="flex justify-center py-8 ">
-              <p className="text-3xl font-semibold   p-2">
+          <div className="flex justify-between px-3 py-3">
+            <div className=" ">
+              <p className=" font-semibold   p-2">
                 {' '}
-                <span className="text-3xl font-semibold ">
+                <span className="  text-xs  lg:text-2xl font-semibold ">
                   {certifical.date}
                 </span>
               </p>
             </div>
-            <div className="flex justify-center py-8 ">
+           
+            <div className="">
+              <p className=" text-xs lg:text-xl font-medium">{certifical.description}</p>
+            </div>
+            
+            <div className="">
+          
+              <p className="text-xs lg:text-xl ">{certifical.contact}</p>
+            </div>
+            
+          </div>
+          <div className="p-4 flex justify-between">
+            <h1 className="mb-4 text-base lg:text-3xl font-semibold pt-8">{` CL -  ${certifical._id}`}</h1>
+            <h2 className="flex justify-center py-8 ">
               <p className="text-3xl font-semibold   p-2">
                 {' '}
-                <span className="text-3xl font-semibold ">
-                  {certifical.duration}
+                <span className="text-sm lg:text-2xl font-semibold ">
+                  {certifical.duration} Hours
                 </span>
               </p>
-            </div>
-            <p className="pt-6 flex  font-semibold">
-              Institution{' '}
-              <span className="py-1 px-2">
-                <BsArrowDownLeft />
-              </span>
-            </p>
-            <div className="flex ">
-              {/* <button
-                onClick={redirecionarWhatsapp}
-                className=" bg-green-700 p-3 mb-4 rounded text-base font-semibold"
-              >
-                <BsWhatsapp />
-              </button> */}
-              <p className="flex py-1 px-3 text-xl ">{certifical.contact}</p>
-            </div>
-            <div className="flex justify-center py-8  mb-5">
-              <p className="text-xl font-medium">{certifical.description}</p>
-            </div>
-          </div>
-          <div className="p-4">
-            <h1 className="mb-4 text-3xl font-semibold pt-8">{` CL -  ${certifical._id}`}</h1>
+            </h2>
           </div>
         </div>
       </div>

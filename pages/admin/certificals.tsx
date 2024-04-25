@@ -104,7 +104,7 @@ const AdmincertificalsScreen = () => {
                    <button 
                         disabled={loadingCreate} 
                         onClick={createHandler} 
-                        className='bg-blue-300 border border-zinc-600 p-3 hover:bg-blue-500'
+                        className='bg-blue-500 border border-zinc-600 p-3 hover:bg-blue-700'
                         >{loadingCreate ? 'Loading': 'CREATE NEW'}
                      </button>
                 </div>
@@ -114,7 +114,7 @@ const AdmincertificalsScreen = () => {
                  ): error ? (
                  <div className='alert-error'>{error}</div>
                  ):(
-                 <div className=' bg-white rounded-md bg-opacity-80 m-2 p-2 '>
+                 <div className=' rounded-md m-2 p-2 '>
                     <table className='w-full'>
                        <thead className='border-b'>
                        <tr>

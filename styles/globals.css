@@ -13,7 +13,7 @@ body {
 }
 
 .card {
-    @apply flex bg-white bg-opacity-80 hover:bg-opacity-60  flex-col justify-between mb-5 block rounded-lg border border-gray-700 shadow-md hover:shadow-xl 
+    @apply flex bg-opacity-80 hover:bg-opacity-60  flex-col justify-between mb-5 block rounded-lg border border-gray-700 shadow-md hover:shadow-xl 
 }
 
 
@@ -46,4 +46,16 @@ body {
 select,
 textarea {
     @apply rounded border p-2 outline-none ring-green-300 focus:ring;
+}
+
+
+:root {
+  /* Your default theme */
+  --background: white;
+  --foreground: black;
+}
+
+[data-theme='dark'] {
+  --background: black;
+  --foreground: white;
 }

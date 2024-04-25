@@ -17,14 +17,14 @@ const handler = async (req:any, res:any) => {
 const postHandler = async (req:any, res:any) => {
     await db.connect();
     const newCertifical = new Certifical({
-        name:'inisira o nome',
-        slug: 'insira-slug',
-        category: 'insira a categoria',
+        name:'New name',
+        slug: 'URL'+ Math.random(),
+        category: 'New category',
         image: '',
         date:'00/00/0000',
         duration:'d/h',
-        description: 'Insira a descrição da certificação',
-        contact:'insira o contato'
+        description: 'Description of the certification',
+        contact:'Name of the institution'
     });
     const certifical = await newCertifical.save();
     await db.disconnect()

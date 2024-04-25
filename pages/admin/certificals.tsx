@@ -95,7 +95,7 @@ const AdmincertificalsScreen = () => {
     }
   return (
     <Layout title='Certificals Admin'>
-     <div className='f'>
+     <div className=''>
     
             <div className='flex flex-col text-center  space-y-16 h-screen '>
                 <div className='flex justify-between'>

@@ -23,7 +23,7 @@ export default function Home() {
             <Slider  slides={slides}/>
           </div>
           <div className=''>
-          <Link className=' border p-6 rounded-md bg-indigo-600 text-white font-bold' href='/login?redirect=/admin/certificals'>Get Started</Link>
+          <Link className=' border p-6 rounded-md bg-blue-500 hover:bg-blue-700 text-white font-bold' href='/login?redirect=/admin/certificals'>Get Started</Link>
           </div>
         </div>
       </Layout>

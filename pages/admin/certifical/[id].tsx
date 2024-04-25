@@ -133,7 +133,7 @@ const AdminCertificalEditScreen = () => {
         contact,
       });
       dispatch({ type: 'UPDATE_SUCCESS' });
-      toast.success('Produto atualizado com sucesso!');
+      toast.success('Successful product successfully!');
       router.push('/admin/certificals');
     } catch (err) {
         console.log('erro aqui')
@@ -143,9 +143,9 @@ const AdminCertificalEditScreen = () => {
 
   return (
     <Layout title={`Certifical: ${certificalId}`}>
-      <div className="grid md:grid-cols-4 md:gap-5">
+      <div className="flex justify-center   ">
         
-        <div className="md:col-span-3">
+        <div className=" md:col-span-3 max-w-3xl ">
           {loading ? (
             <div>Loading...</div>
           ) : error ? (
@@ -159,9 +159,9 @@ const AdminCertificalEditScreen = () => {
               <div className="bg-white rounded-md bg-opacity-80 m-2 p-2">
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="name">
-                    Nome{' '}
+                    Name{' '}
                     <span className="text-graym ">
-                      (Insira o nome da certificação)
+                      (Enter the certification name)
                     </span>
                   </label>
                   <input
@@ -170,7 +170,7 @@ const AdminCertificalEditScreen = () => {
                     id="name"
                     autoFocus
                     {...register('name', {
-                      required: 'Insira o nome do produto',
+                      required: 'Insira o nome do certificação',
                     })}
                   />
                   {errors.name && (
@@ -180,10 +180,10 @@ const AdminCertificalEditScreen = () => {
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="price">
                     Slug{' '}
-                    <span className="text-graym ">
-                      (Insira o slug da certificação sem letras maiúsculas, sem
-                      acentos, sem caracteres especiais EX: @;!;$;% , use - pra
-                      espaço EX: guarda-roupas-casal )
+                    <span className="text-red-500 ">
+                      (Insert the SLUG of certification without capital letters, without
+                      accents, without special characters Ex: @;!; $;%, use - for
+                      Ex-space: )
                     </span>
                   </label>
                   <input
@@ -201,9 +201,9 @@ const AdminCertificalEditScreen = () => {
 
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="category">
-                    Categoria{' '}
+                    Category{' '}
                     <span className="text-graym ">
-                      (Insira a categoria do produto)
+                      (Enter the certification category)
                     </span>
                   </label>
                   <input
@@ -211,7 +211,7 @@ const AdminCertificalEditScreen = () => {
                     className="w-full"
                     id="category"
                     {...register('category', {
-                      required: 'Insira a categoria do produto',
+                      required: 'Enter the certification category',
                     })}
                   />
                   {errors.category && (
@@ -221,10 +221,9 @@ const AdminCertificalEditScreen = () => {
 
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="image">
-                    Imagem{' '}
-                    <span className="text-graym ">
-                      (Não digite nada nesse campo, ele será preenchido ao
-                      escolher o arquivo no seu dispositívo)
+                    Image{' '}
+                    <span className="text-red-500 ">
+                      (Do not type anything in this field, it will be completed when choosing the file on your device)
                     </span>
                   </label>
                   <input
@@ -232,7 +231,7 @@ const AdminCertificalEditScreen = () => {
                     className="w-full"
                     id="image"
                     {...register('image', {
-                      required: 'Insira a imagem do produto',
+                      required: 'Insert the certification image',
                     })}
                   />
                   {errors.image && (
@@ -243,7 +242,7 @@ const AdminCertificalEditScreen = () => {
                   <label className="font-semibold" htmlFor="imageFile">
                     Upload image{' '}
                     <span className="text-graym ">
-                      (Escolha a imagem no seu dispositivo )
+                      (Choose the image on your device )
                     </span>
                   </label>
                   <input
@@ -257,10 +256,9 @@ const AdminCertificalEditScreen = () => {
 
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="image">
-                    Descrição{' '}
+                    Description{' '}
                     <span className="text-graym ">
-                      (Insira a descrição do produto com o nome da pessoa que
-                      está vendendo no final caso desejar!)
+                      (Insira a descrição da certificação!)
                     </span>
                   </label>
                   <input
@@ -268,7 +266,7 @@ const AdminCertificalEditScreen = () => {
                     className="w-full"
                     id="description"
                     {...register('description', {
-                      required: 'Insira a descrição do produto',
+                      required: 'Insert the description of the certification',
                     })}
                   />
                   {errors.description && (
@@ -279,8 +277,7 @@ const AdminCertificalEditScreen = () => {
                   <label className="font-semibold" htmlFor="image">
                     Duration{' '}
                     <span className="text-graym ">
-                      (Insira a descrição do produto com o nome da pessoa que
-                      está vendendo no final caso desejar!)
+                      (Enter the duration of the course!)
                     </span>
                   </label>
                   <input
@@ -297,10 +294,9 @@ const AdminCertificalEditScreen = () => {
                 </div>
                 <div className="mb-4">
                   <label className="font-semibold" htmlFor="image">
-                    Contato{' '}
+                    Institution{' '}
                     <span className="text-graym ">
-                      (Insira o contato da pessoa sem espaços, sem parentese,
-                      sem hífen, no fomato EX: 5571998765432)
+                      (The name of the institution)
                     </span>
                   </label>
                   <input
@@ -319,7 +315,7 @@ const AdminCertificalEditScreen = () => {
                   <label className="font-semibold" htmlFor="image">
                     Data{' '}
                     <span className="text-graym ">
-                      (Insira a data de emissão no formato: 00/00/0000)
+                      (Enter the issuance date in format: 00/00/0000)
                     </span>
                   </label>
                   <input
@@ -327,7 +323,7 @@ const AdminCertificalEditScreen = () => {
                     className="w-full"
                     id="date"
                     {...register('date', {
-                      required: 'Insira a data de emissão',
+                      required: 'Enter the issuance date',
                     })}
                   />
                   {errors.contact && (
@@ -346,7 +342,7 @@ const AdminCertificalEditScreen = () => {
                   <span className="py-1 px-1 ">
                     <BiArrowBack />
                   </span>
-                  Voltar
+                  To go back
                 </Link>
               </div>
             </form>

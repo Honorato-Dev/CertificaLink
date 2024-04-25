@@ -181,7 +181,7 @@ const AdminCertificalEditScreen = () => {
                   <label className="font-semibold" htmlFor="price">
                     Slug{' '}
                     <span className="text-red-500 ">
-                      (OPIALIZED PERSONALIZED URL)
+                      (PERSONALIZED URL)
                     </span>
                   </label>
                   <input
